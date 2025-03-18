@@ -1,0 +1,6 @@
+Nome: Matheus Etelvino dos Santos
+Idade:17
+Conhecimento Técnico: Só o que me foi apresentado no curso até agora, mas tenho mais intimidade com SQL
+Mora com: Pai e Mãe
+Gosta de: Eu gosto de treinar, jogar jogos virtuais e jogar vôlei
+Trabalho: Não trabalho, mas tenho vontade de trabalhar na área de front-end
