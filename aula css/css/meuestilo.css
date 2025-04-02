@@ -1,0 +1,28 @@
+
+body{
+    background:silver;
+    font-family: arial black;
+    
+}
+
+p{
+    color:green;
+    font-family: monotype corsiva;
+    
+}
+
+h3,h4{
+    font-family: Arial;
+}
+
+h3{
+    color:blue
+}
+
+h4{
+    color:yellow
+}
+
+li{
+    font-size:12px;
+}
