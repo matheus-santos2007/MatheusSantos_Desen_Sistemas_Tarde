@@ -1,21 +1,29 @@
-body{
+
+body {
+    margin: 0;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
-    margin: 0;
-    background-color: gray;
+    min-height: 100vh;
 }
 
-h1{
-    margin-bottom: 20px;
-    text-align: center;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.login-form{
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-form {
     width: 100%;
     max-width: 500px;
     padding: 20px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.521);
 }

@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: gray;
+}
+
+
+
+
+
+.table{
+    
+    width:100%;
+    max-width:600px;
+    margin: 0 auto;
+    border:5px solid black;
+    
+    text-align: center;
+    align-items: center;
+}
