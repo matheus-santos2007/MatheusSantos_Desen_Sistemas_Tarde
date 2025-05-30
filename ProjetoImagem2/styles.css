@@ -1,0 +1,155 @@
+/* Configurações gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilo dos cards de visualização */
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+}
+
+/* Imagens */
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Formulários */
+form input, form select {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #27ae60;
+}
+
+/* Menu Dropdown */
+nav {
+    background-color: #34495e;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, .dropdown:hover .dropbtn {
+    background-color: #2980b9;
+}
+
+nav li.dropdown {
+    display: inline-block;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #2980b9;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
