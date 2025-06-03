@@ -2,27 +2,30 @@
     
 //Funçao para dimenesionar a imagem
 function redimensionarImagem($imagem, $largura, $altura){
-    list($larguraOriginal, $alturaOriginal, $tipo) = getimagesize($imagem);
 
-    if($tipo != IMAGETYPE_JPEG){
-        die("Erro: Apenas imagens JPEG são suportadas.");
-    }
+    //Obtem as dimensões originais da imagem
+    list($larguraOriginal, $alturaOriginal) = getimagesize($imagem);
 
+    //CRIA UMA NOVA IMAGEM COM AS DIMENSÕES ESPECIFICADAS
     $novaImagem = imagecreatetruecolor($largura, $altura);
+
+    //CRIA UMA IMAGEM A PARTIR DO ARQUIVO ORIGINAL(FORMATO jpeg)
     $imagemOriginal = imagecreatefromjpeg($imagem);
 
+    //COPIA E REDIMENSIONA A IMAGEM ORIGINAL PARA A NOVA IMAGEM
     imagecopyresampled($novaImagem, $imagemOriginal, 0, 0, 0, 0, $largura, $altura, $larguraOriginal, $alturaOriginal);
 
+    //INICIA A SAIDA PARA CAPTURAR OS DADOS DA IMAGEM
     ob_start();
     imagejpeg($novaImagem);
-    $dadosImagem = ob_get_clean();
+    $dadosImagem = ob_get_clean();//obtem os dados da image, no buffer
 
+    //LIBERA A MEMÓRIA USADA PELAS IMAGENS
     imagedestroy($novaImagem);
     imagedestroy($imagemOriginal);
 
-    return $dadosImagem;
+    return $dadosImagem; //RETORNA OS DADOS DA IMAGEM REDIMENSIONADA
 }
-
 
 //CONEXAO COM O BANCO DE DADOS
 $host = 'localhost';
@@ -47,7 +50,7 @@ try{
             $foto = redimensionarImagem($_FILES['foto']['tmp_name'], 300, 400);
 
             //PREPARA A INSTRUÇÃO SQL PARA INSERIR OS DADOS DO FINCIONARIO NO BANCO DE DADOS
-            $sql = "INSERT INTO funcionarios (nome, telefone, nome_foto, tipo_foto, foto) VALUES (:nome, :telefone, :nome_foto, :tipo_foto, :foto)";
+            $sql = "INSERT INTO funcionario (nome, telefone, nome_foto, tipo_foto, foto) VALUES (:nome, :telefone, :nome_foto, :tipo_foto, :foto)";
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':nome', $nome);
             $stmt->bindParam(':telefone', $telefone);
@@ -81,14 +84,12 @@ try{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Imagens</title>
-    <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <h1>Lista de Imagens</h1>
 
     <!-- LINK PARA LISTAR FUNCIONARIOS -->
-     <a href="consulta_funcionario.php">Listar Funcionários</a>
+     <a href="consultar_funcionario.php">Listar Funcionários</a>
     
 </body>
 </html>

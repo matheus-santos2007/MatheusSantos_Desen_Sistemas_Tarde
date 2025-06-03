@@ -1,155 +1,68 @@
-/* Configurações gerais da página */
+/* Define estilos gerais para a página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
     margin: 0;
-    padding: 0;
+    background-color: #f4f4f4; /* Cor de fundo suave */
 }
 
-/* Container centralizado */
-.container {
-    width: 80%;
-    margin: 30px auto;
-    background-color: #fff;
+/* Estiliza o formulário */
+form {
+    background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os elementos */
+    width: 300px;
 }
 
-/* Cabeçalho */
-h1, h2 {
-    text-align: center;
-    color: #333;
+/* Estiliza os rótulos */
+label {
+    font-weight: bold;
 }
 
-/* Estilo dos cards de visualização */
-.card {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fafafa;
-    margin-bottom: 20px;
-}
-
-/* Imagens */
-img {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Botões */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
-/* Tabelas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table th, table td {
+/* Estiliza os campos de entrada */
+input {
     padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-table th {
-    background-color: #3498db;
-    color: white;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Formulários */
-form input, form select {
-    padding: 8px;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    font-size: 16px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form button {
-    padding: 10px 20px;
-    background-color: #2ecc71;
+/* Estiliza o botão */
+button {
+    background-color: #007bff;
     color: white;
+    padding: 10px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-form button:hover {
-    background-color: #27ae60;
+button:hover {
+    background-color: #0056b3;
 }
 
-/* Menu Dropdown */
-nav {
-    background-color: #34495e;
-    padding: 10px;
+h1{
+    font-family: Arial, sans-serif;
+    font-size: 35px; /* Aumenta o tamanho da fonte */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav li {
-    float: left;
-}
-
-nav li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 12px 16px;
-    text-decoration: none;
-}
-
-nav li a:hover, .dropdown:hover .dropbtn {
-    background-color: #2980b9;
-}
-
-nav li.dropdown {
-    display: inline-block;
-}
-
-nav .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #34495e;
-    min-width: 160px;
-    z-index: 1;
-}
-
-nav .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-nav .dropdown-content a:hover {
-    background-color: #2980b9;
-}
-
-nav .dropdown:hover .dropdown-content {
-    display: block;
+h2{
+    font-family: Arial, sans-serif;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
